@@ -79,25 +79,6 @@ export const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
           textTransform: "none",
           transition:
             "box-shadow 0.3s ease-in-out borderColor 0.3s ease-in-out  color 0.3s ease-in-out",
-          "&:hover": {
-            // blue glow shadow related to the main color
-            // get main theme color and convert it to rgba
-
-            // boxShadow: `0 2px 6px 0 rgba(${r},${g},${b},0.5)`,
-            boxShadow: "none",
-            backgroundColor: mainColor,
-          },
-        },
-        contained: {},
-        outlined: {
-          "&:hover": {
-            backgroundColor: "white",
-          },
-        },
-        text: {
-          "&:hover": {
-            backgroundColor: "#fff",
-          },
         },
       },
     },

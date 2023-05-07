@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Button, SpeedDialIcon, Stack, Typography } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Layout from "../components/layout/layout";
 import ThemeContext from "../utils/ThemeContext";
 import SpeedIcon from "@mui/icons-material/Speed";
 
@@ -26,21 +25,22 @@ const IndexPage: NextPage = () => {
         <Typography variant="overline">Overline</Typography>
 
         <br />
-        <Box>
-          <Button variant="contained" onClick={colorMode.toggleColorMode}>
-            Contained button
-          </Button>
+        <Stack
+          direction="row"
+          spacing={2}
+          sx={{ justifyContent: "flex-start" }}
+        >
+          <Button variant="contained">Contained button</Button>
           <Button
             variant="contained"
             sx={{ fontWeight: 500 }}
             startIcon={<SpeedIcon />}
-            onClick={colorMode.toggleColorMode}
           >
             Dashboard
           </Button>
           <Button variant="outlined">Outlined button</Button>
           <Button variant="text">Text button</Button>
-        </Box>
+        </Stack>
       </Stack>
     </>
   );

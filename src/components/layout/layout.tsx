@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import Head from "next/head";
 import React from "react";
+import PrimarySearchAppBar from "../navbar/navbar";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -9,6 +10,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <title>Welcome User</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <PrimarySearchAppBar />
       <Grid
         container
         columns={20}
@@ -16,7 +18,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           backgroundColor: "background.paper",
         }}
       >
-        <Grid item>{children}</Grid>
+        <Grid item xs>
+          {children}
+        </Grid>
       </Grid>
     </>
   );
