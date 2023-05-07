@@ -1,30 +1,32 @@
 import "../styles/globals.css";
-
-import { Fira_Sans, Nunito } from "next/font/google";
+import { CacheProvider, EmotionCache } from "@emotion/react";
 import { Provider } from "react-redux";
+import { CssBaseline } from "@mui/material";
 import type { AppProps } from "next/app";
 import store from "../store";
-import { ThemeContextProvider } from "../utils/ThemeContext";
+import { ThemeContextProvider } from "../styles/theme/ThemeContext";
 import Layout from "../components/layout/layout";
-import { CssBaseline } from "@mui/material";
+import createEmotionCache from "../utils/createEmotionCache";
 
-const fira = Fira_Sans({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
-const nunito = Nunito({ weight: ["400"], subsets: ["latin"] });
+const clientSideEmotionCache = createEmotionCache();
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
+
+export default function MyApp({ Component, pageProps, ...props }: MyAppProps) {
+  // If there's no emotionCache rendered by the server, use the clientSideEmotionCache
+  const { emotionCache = clientSideEmotionCache } = props;
   return (
-    <Provider store={store}>
+    <CacheProvider value={emotionCache}>
       <ThemeContextProvider>
-        <CssBaseline />
-        <main className={`${fira.className} ${nunito.className}`}>
+        <Provider store={store}>
+          <CssBaseline />
           <Layout>
             <Component {...pageProps} />
           </Layout>
-        </main>
+        </Provider>
       </ThemeContextProvider>
-    </Provider>
+    </CacheProvider>
   );
 }
