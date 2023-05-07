@@ -1,21 +1,8 @@
 import { createTheme, PaletteMode, ThemeOptions } from "@mui/material";
-import { deepOrange, grey } from "@mui/material/colors";
+import { deepOrange, grey, indigo } from "@mui/material/colors";
 
-// hex to rgba converter
-const hexToRgb = (hex: string) => {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result
-    ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
-      }
-    : null;
-};
-
-const mainColor = "#609966";
+const mainColor = indigo[500];
 //@ts-ignore
-const { r, g, b } = hexToRgb(mainColor);
 const firaSansFont = ["Fira Sans", "sans-serif"].join(",");
 const nunitoFont = ["Nunito", "sans-serif"].join(",");
 
