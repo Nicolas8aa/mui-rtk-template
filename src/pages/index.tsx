@@ -6,8 +6,6 @@ import ThemeContext from "../utils/ThemeContext";
 import SpeedIcon from "@mui/icons-material/Speed";
 
 const IndexPage: NextPage = () => {
-  const colorMode = React.useContext(ThemeContext);
-
   return (
     <>
       <Stack p={3}>
@@ -31,13 +29,6 @@ const IndexPage: NextPage = () => {
           sx={{ justifyContent: "flex-start" }}
         >
           <Button variant="contained">Contained button</Button>
-          <Button
-            variant="contained"
-            sx={{ fontWeight: 500 }}
-            startIcon={<SpeedIcon />}
-          >
-            Dashboard
-          </Button>
           <Button variant="outlined">Outlined button</Button>
           <Button variant="text">Text button</Button>
         </Stack>

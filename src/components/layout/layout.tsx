@@ -1,28 +1,14 @@
-import { Grid } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 import Head from "next/head";
 import React from "react";
 import PrimarySearchAppBar from "../navbar/navbar";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <>
-      <Head>
-        <title>Welcome User</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Stack>
       <PrimarySearchAppBar />
-      <Grid
-        container
-        columns={20}
-        sx={{
-          backgroundColor: "background.paper",
-        }}
-      >
-        <Grid item xs>
-          {children}
-        </Grid>
-      </Grid>
-    </>
+      {children}
+    </Stack>
   );
 };
 
