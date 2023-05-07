@@ -15,15 +15,15 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
 
 ```bash
-npx create-next-app --example [Github Repository Link] <YOUR_APP_NAME>
+npx create-next-app --example https://github.com/Nicolas8aa/mui-rtk-template <YOUR_APP_NAME>
 ```
 
 ```bash
-yarn create next-app --example [Github Repository Link] <YOUR_APP_NAME>
+yarn create next-app --example https://github.com/Nicolas8aa/mui-rtk-template <YOUR_APP_NAME>
 ```
 
 ```bash
-pnpm create next-app --example [Github Repository Link] <YOUR_APP_NAME>
+pnpm create next-app --example https://github.com/Nicolas8aa/mui-rtk-template<YOUR_APP_NAME>
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
