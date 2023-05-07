@@ -1,10 +1,15 @@
 import { createTheme, PaletteMode, ThemeOptions } from "@mui/material";
 import { deepOrange, grey, indigo } from "@mui/material/colors";
+import { Inter } from "next/font/google";
 
 const mainColor = indigo[500];
-//@ts-ignore
-const firaSansFont = ["Fira Sans", "sans-serif"].join(",");
-const nunitoFont = ["Nunito", "sans-serif"].join(",");
+
+export const inter = Inter({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  fallback: ["Helvetica", "Arial", "sans-serif"],
+});
 
 export const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
   palette: {
@@ -46,19 +51,7 @@ export const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
     },
   },
   typography: {
-    fontFamily: firaSansFont,
-    h1: {
-      fontFamily: nunitoFont,
-    },
-    h2: {
-      fontFamily: nunitoFont,
-    },
-    h3: {
-      fontFamily: nunitoFont,
-    },
-    h4: {
-      fontFamily: nunitoFont,
-    },
+    fontFamily: inter.style.fontFamily,
   },
   components: {
     MuiTypography: {

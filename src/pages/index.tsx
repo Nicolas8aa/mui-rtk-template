@@ -2,8 +2,6 @@ import React from "react";
 import { Box, Button, SpeedDialIcon, Stack, Typography } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
-import ThemeContext from "../utils/ThemeContext";
-import SpeedIcon from "@mui/icons-material/Speed";
 
 const IndexPage: NextPage = () => {
   return (

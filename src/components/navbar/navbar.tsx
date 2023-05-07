@@ -17,7 +17,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import ThemeContext from "../../utils/ThemeContext";
+import ThemeContext from "../../styles/theme/ThemeContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
